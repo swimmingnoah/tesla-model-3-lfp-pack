@@ -86,17 +86,6 @@ The low SOC (0.6%) explains the wide delta — LFP cells diverge noticeably at t
 | Inlet Active Heat Target | -7.50 °C |
 | Flow Request | 0.00 LPM |
 
-## Active faults at readout
-
-| Code | Severity | Count | Last Event |
-| --- | --- | --- | --- |
-| `INTERNAL_OPEN_FAULT` | ERROR | 67 → 177 | High voltage cable removed while battery running — opening contactors |
-| `CELL_UNDER_VOLTAGE` | WARNING | 90 → 237 | Cell undervoltage — further discharge not possible, check cell balancing |
-| `CAN_NATIVE_TX_FAILURE` | WARNING | 130 | CAN_NATIVE failed to transmit, or no one on the bus to ACK |
-| `CAN_BATTERY` | ERROR | (rolling) | — |
-
-`INTERNAL_OPEN_FAULT` and `CELL_UNDER_VOLTAGE` are expected on a bench-disconnected pack at 0.6% SOC; the pack reports `FAULT` and refuses to close contactors.
-
 ## Hardware / firmware
 
 | Field | Value |
